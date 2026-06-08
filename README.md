@@ -178,7 +178,7 @@ Run tests with:
 
 ```powershell
 python -m pytest
-
+```
 
 ## Why This Project Matters
 
