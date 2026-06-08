@@ -133,15 +133,15 @@ The main database table is:
 
 service_requests
 
-# The database schema is defined in:
+## The database schema is defined in:
 
 sql/create_tables.sql
 
-# Additional analytics queries are included in:
+## Additional analytics queries are included in:
 
 sql/analytics_queries.sql
 
-# Reusable reporting views are defined in:
+## Reusable reporting views are defined in:
 
 sql/create_views.sql
 SQL Analytics Examples
