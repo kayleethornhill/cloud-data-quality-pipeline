@@ -2,13 +2,15 @@
 
 ## Project Summary
 
-This project is a local data quality pipeline built with Python and pandas. It simulates a real-world business process where raw service request data is ingested, cleaned, validated, and separated into clean and rejected output files.
+This project is a local data quality pipeline built with Python, pandas, and PostgreSQL. I built it to model a realistic business problem: raw operational data comes in messy, inconsistent, and not ready to trust yet.
 
-The goal of this project is to demonstrate how messy operational data can be checked for quality before it is used for reporting, dashboards, analysis, or database loading.
+The pipeline takes raw service request data, cleans and standardizes the values, validates each record against data quality rules, separates rejected records with clear error messages, and loads the clean data into PostgreSQL for SQL analysis.
+
+The goal of this project is to show how raw data can be turned into something more reliable, organized, and usable before it reaches reports, dashboards, databases, or decision-makers.
 
 ## Business Problem
 
-Organizations often receive data from multiple systems, departments, or manual entry forms. Before that data can be trusted for decision-making, it needs to be reviewed for missing values, invalid formats, duplicates, inconsistent categories, and business rule violations.
+Organizations often receive data from multiple systems, departments, or manual entry forms (looking at you Microsoft Forms). Before that data can be trusted for decision-making, it needs to be reviewed for missing values, invalid formats, duplicates, inconsistent categories, and business rule violations.
 
 This project uses a sample service request dataset that includes common data quality issues such as missing fields, invalid dates, duplicate request IDs, negative costs, invalid statuses, and inconsistent text formatting.
 
@@ -40,6 +42,7 @@ Export rejected records with validation errors
 ```
 
 ## Project Structure
+```text
 cloud-data-quality-pipeline/
 │
 ├── data/
@@ -61,26 +64,27 @@ cloud-data-quality-pipeline/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 
 ## Data Quality Rules
 
 The validation process checks for:
 
-Missing request IDs
-Duplicate request IDs
-Invalid or missing submitted dates
-Missing departments
-Missing request types
-Invalid priority values
-Invalid status values
-Negative or missing cost values
-Resolution dates that occur before submitted dates
-Customer satisfaction scores outside the allowed range of 1 to 5
+- Missing request IDs
+- Duplicate request IDs
+- Invalid or missing submitted dates
+- Missing departments
+- Missing request types
+- Invalid priority values
+- Invalid status values
+- Negative or missing cost values
+- Resolution dates that occur before submitted dates
+- Customer satisfaction scores outside the allowed range of 1 to 5
 
 ## Cleaning Logic
 
 The cleaning step standardizes values that are fixable, such as inconsistent capitalization or formatting.
-
+```text
 Examples:
 
 open → Open
@@ -89,7 +93,7 @@ Complete → Closed
 in-progress → In Progress
 medium → Medium
 LOW → Low
-
+```
 ## Sample Pipeline Output
 
 When the pipeline runs successfully, it prints a summary like:
@@ -148,15 +152,15 @@ SQL Analytics Examples
 
 ## This project includes SQL queries for:
 
-Request counts by department
-Request counts by priority
-Request counts by status
-Average actual cost by department
-Total actual cost by department
-Average satisfaction score by department
-Resolution time by request
-Average resolution time by assigned team
-Cost variance between estimated and actual cost
+- Request counts by department
+- Request counts by priority
+- Request counts by status
+- Average actual cost by department
+- Total actual cost by department
+- Average satisfaction score by department
+- Resolution time by request
+- Average resolution time by assigned team
+- Cost variance between estimated and actual cost
 
 ## Automated Tests
 
@@ -184,20 +188,20 @@ python -m pytest
 
 This project demonstrates important data engineering and data quality skills, including:
 
-Reading raw data from CSV files
-Cleaning inconsistent business values
-Validating data against business rules
-Separating clean and rejected records
-Creating an audit trail for data quality issues
-Structuring a project for future database and cloud expansion
-Future Improvements
+- Reading raw data from CSV files
+- Cleaning inconsistent business values
+- Validating data against business rules
+- Separating clean and rejected records
+- Creating an audit trail for data quality issues
+- Structuring a project for future database and cloud expansion
+
 
 ## Planned future improvements include:
 
-Load clean records into PostgreSQL
-Create SQL tables and analytics queries
-Add automated tests with pytest
-Add Docker support
-Add GitHub Actions for automated validation
-Build a cloud architecture version using AWS services such as S3, Lambda, Glue, Athena, IAM, and CloudWatch
-Add Terraform infrastructure-as-code examples
+- Load clean records into PostgreSQL
+- Create SQL tables and analytics queries
+- Add automated tests with pytest
+- Add Docker support
+- Add GitHub Actions for automated validation
+- Build a cloud architecture version using AWS services such as S3, Lambda, Glue, Athena, IAM, and CloudWatch
+- Add Terraform infrastructure-as-code examples
