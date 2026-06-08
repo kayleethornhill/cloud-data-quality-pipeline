@@ -1,0 +1,11 @@
+request_id,submitted_date,department,request_type,priority,status,assigned_team,region,estimated_cost,actual_cost,resolution_date,customer_satisfaction_score,description,validation_errors
+REQ-1004,2026-01-06,,Data Correction,High,Closed,Data Quality,West,150,100,2026-01-08,5,Incorrect department listed in system,Missing department
+REQ-1005,,HR,System Access,Critical,Open,Infrastructure,North,400,375,2026-01-10,4,Access needed for onboarding,Invalid or missing submitted_date
+REQ-1006,2026-01-08,Engineering,Project Update,hgh,Open,Project Controls,South,250,275,2026-01-11,6,Project milestone update request,Invalid priority; Invalid customer_satisfaction_score
+REQ-1007,2026-01-09,Finance,Report Issue,Medium,In Progress,Analytics,East,350,-25,2026-01-12,2,Report refresh failed,Invalid actual_cost
+REQ-1008,2026-01-10,Operations,Equipment Request,Low,Resolved,Field Support,West,900,850,2026-01-09,4,Printer replacement completed,Resolution date before submitted date
+REQ-1009,2026-01-11,Engineering,Data Correction,High,Closed,Data Quality,North,100,95,2026-01-13,5,Duplicate project record fixed,Duplicate request_id
+REQ-1009,2026-01-12,Engineering,Data Correction,High,Closed,Data Quality,North,100,95,2026-01-14,5,Duplicate request id example,Duplicate request_id
+,2026-01-13,Finance,Report Issue,Medium,Open,Analytics,South,200,180,,3,Missing request id example,Missing request_id
+REQ-1012,2026-01-15,Operations,,Low,Open,Field Support,West,600,550,2026-01-19,5,Missing request type example,Missing request_type
+REQ-1014,2026-01-17,Finance,Report Issue,High,Pending,Analytics,South,300,310,2026-01-21,3,Pending should be invalid status,Invalid status

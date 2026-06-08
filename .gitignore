@@ -4,8 +4,18 @@ __pycache__/
 venv/
 .env
 .DS_Store
+
+# Generated pipeline outputs
 data/processed/*
 !data/processed/.gitkeep
 
 data/rejected/*
 !data/rejected/.gitkeep
+
+# Logs and generated reports
+logs/*.log
+reports/data_quality_report.txt
+
+# Keep folder placeholders
+!logs/.gitkeep
+!reports/.gitkeep

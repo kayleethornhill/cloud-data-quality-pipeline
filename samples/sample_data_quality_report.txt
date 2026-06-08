@@ -1,0 +1,20 @@
+Data Quality Report
+===================
+
+Total Records: 15
+Valid Records: 5
+Rejected Records: 10
+Rejection Rate: 66.67%
+
+Validation Error Summary
+------------------------
+Duplicate request_id: 2
+Missing department: 1
+Invalid or missing submitted_date: 1
+Invalid priority: 1
+Invalid customer_satisfaction_score: 1
+Invalid actual_cost: 1
+Resolution date before submitted date: 1
+Missing request_id: 1
+Missing request_type: 1
+Invalid status: 1

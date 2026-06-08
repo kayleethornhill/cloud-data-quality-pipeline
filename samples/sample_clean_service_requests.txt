@@ -1,0 +1,6 @@
+request_id,submitted_date,department,request_type,priority,status,assigned_team,region,estimated_cost,actual_cost,resolution_date,customer_satisfaction_score,description
+REQ-1001,2026-01-03,Engineering,System Access,High,Open,Infrastructure,North,500,450,2026-01-05,5,New employee needs system access
+REQ-1002,2026-01-04,Finance,Report Issue,Medium,In Progress,Analytics,South,300,325,2026-01-07,4,Monthly report numbers do not match
+REQ-1003,2026-01-05,Operations,Equipment Request,Low,Closed,Field Support,East,1200,1100,2026-01-09,3,Replacement scanner requested
+REQ-1011,2026-01-14,HR,System Access,Critical,In Progress,Infrastructure,East,450,425,2026-01-17,4,Manager access approval needed
+REQ-1013,2026-01-16,Engineering,Project Update,Medium,Closed,Project Controls,North,700,650,2026-01-20,4,Project status update
